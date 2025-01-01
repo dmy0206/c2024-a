@@ -50,6 +50,13 @@ line*release(int k,line**head){
     }
     while(p!=NULL&&p->data!=k){
         prev->next=p->next;
-
+        free(current);
     }
 }
+void traverseList(line *head) {
+    line *current = head;
+    while (current!= NULL) {
+        printf("%d ", current->data);
+        current = current->next;
+    }
+    printf("\n");
